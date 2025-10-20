@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  background: rgba(147, 148, 148, 0.815);
+  padding-bottom: 50px;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: hsl(0, 71%, 38%);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  margin: 10px;
+}
+
+.nav-brand span {
+    text-align: center;
+}
+.nav-brand a {
+    display: block;
+    width: 120px;
+    height: 80px;
+    background-image: url('images/yavuzlar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px; 
+    overflow: hidden;
+}
+
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    display: block;
+    width: 120px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px; 
+    overflow: hidden;
+}
+.nav-links span{
+    margin-top: 30px;
+    height: 60px;
+    color: white;
+    font-weight: 500;
+}
+
+.nav-links a[href*="login"] {
+    margin-top: 8px;
+    height: 60px;
+    background-image: url('images/login-icon.png');
+}
+
+.nav-links a[href*="logout"] {
+    margin-top: 8px;
+    height: 60px;
+    background-image: url('images/logout-icon.png');
+}
+
+.nav-links a[href*="register"] {
+    margin-top: 8px;
+    height: 60px;
+    background-image: url('images/register-icon.png');
+}
+.nav-links a[href*="myaccount"],
+.nav-links a[href*="adminpanel"],
+.nav-links a[href*="companyadmin"]{
+    margin-top: 8px;
+    height: 60px;
+    background-image: url('images/myaccount.png');
+}
+
+.cities-div form,
+.add-route form,
+.add-coupon form,
+.Add_Bus_Company form { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsla(0, 0%, 100%, 0.658);
+    border-radius: 8px;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.2);
+    margin: 10px auto;
+    padding: 30px 20px;
+    gap: 20px;
+    max-width: 900px;
+}
+
+.cities-div form {
+    padding: 50px 20px;
+}
+
+.add-route form,
+.add-coupon form {
+    flex-wrap: wrap;
+    max-width: 650px;
+    padding: 20px;
+}
+
+.cities-div label,
+.add-route label,
+.add-coupon label,
+.Add_Bus_Company label{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #333;
+    font-weight: 500;
+    margin: 0;
+}
+
+.cities-div select,
+.cities-div input[type="date"] {
+    padding: 15px 10px; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: large;
+    text-align: left;
+    text-align-last:left ;
+    min-width: 150px;
+}
+
+.add-route select,
+.add-route input,
+.add-coupon select,
+.add-coupon input {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: medium;
+    text-align: left;
+    text-align-last:left ;
+    min-width: 250px;
+}
+
+.cities-div button{
+    background-image: url('images/search-button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px; 
+    width: 100px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    align-self: flex-end; 
+    margin-bottom: 5px;
+}
+
+button {
+    background: hsl(0, 71%, 38%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    margin-top: 15px;
+    max-width: 200px;
+    align-self: center;
+}
+
+.add-route button,
+.add-coupon button,
+.Add_Bus_Company button {
+    grid-column: 1 / -1; 
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+.book-btn:hover,
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}  
+
+h1, h2, h3 {
+    text-align: center;
+    margin: 15px 0;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: hsl(0, 71%, 38%);
+}
+
+.Bus_Company,
+.company_admin_manager,
+.coupon,
+.companie, 
+.Crud-system { 
+    background: #f8f8f8;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 900px;
+}
+
+.routes-list,
+.coupons,
+.companies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.route-card,
+.coupon-card,
+.company-card
+{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    width: 95%;
+    max-width: 600px;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.route-info,
+.coupon-info {
+    flex-grow: 1;
+}
+
+.route-card p,
+.coupon-card p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+    text-align: left;
+}
+
+.route-card h3,
+.coupon-card h3 {
+    text-align: left;
+}
+
+
+.company-card {
+    flex-direction: column;
+    text-align: center;
+}
+
+.company-card p {
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.company-card form {
+    display: inline-flex;
+    margin: 0 5px;
+    width: auto;
+}
+
+.company-card button {
+    width: 120px; 
+    padding: 8px 15px;
+    font-size: 0.9em;
+    margin: 0; 
+}
+
+.route-card form {
+    margin-left: 10px;
+}
+.route-card form button {
+    margin-top: 0;
+    width: 120px;
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
+.coupon-card {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.coupon-card .coupon-info {
+    width: 100%;
+}
+
+.coupon-card form {
+    display: inline-flex;
+    margin: 0 5px 0 0;
+    width: auto;
+}
+.coupon-card form button {
+    width: 100px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
+.add_company_admin form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+.add_company_admin label {
+    align-items: flex-start;
+    font-weight: 500;
+    color: #333;
+    width: 100%;
+}
+
+.add_company_admin input[type="text"],
+.add_company_admin input[type="email"],
+.add_company_admin input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: medium;
+}
+
+.add_company_admin small {
+    color: hsl(0, 71%, 38%);
+    font-size: 0.8em;
+    display: block;
+    margin-top: 3px;
+}
+
+.add_company_admin button {
+    width: 100%;
+    max-width: none;
+}
+
+.companie {
+    text-align: center;
+}
+
+.companie .company-card {
+    margin: 10px auto 20px;
+}
+
+.companie .Add_Bus_Company form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: hsla(0, 0%, 100%, 0.658);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: 10px auto;
+    gap: 15px;
+}
+
+.companie .Add_Bus_Company label,
+.companie .Add_Bus_Company input[type="file"] {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.companie .Add_Bus_Company button,
+.companie .Add_Bus_Company input[type="submit"] {
+    max-width: 300px;
+}
+
+
+
+.bus-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px; 
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.driver-area {
+    background-color: #e9ecef;
+    padding: 5px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+#seats-container {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 20px 1fr 1fr; 
+    gap: 8px 5px; 
+    padding: 10px;
+}
+
+
+.corridor {
+    grid-column: 3;
+    height: 45px; 
+}
+
+
+
+
+.seat {
+    width: 45px;
+    height: 45px;
+    border: 2px solid;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.seat.empty {
+    background-color: #28a745; 
+    border-color: #1e7e34;
+    color: white;
+}
+.seat.empty:hover:not([disabled]) {
+    background-color: #1e7e34;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.7);
+}
+
+
+.seat.selected {
+    background-color: #ffc107; 
+    border-color: #d39e00;
+    color: #333;
+    box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+    transform: scale(1.05);
+}
+
+.seat.taken {
+    background-color: #dc3545; 
+    border-color: #c82333;
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.6; 
+}
+.seat[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+#coupon-area {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #f1f3f5;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#coupon-area h4 {
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+#coupon-area form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0;
+    border: none;
+    background: none;
+    margin: 0;
+}
+
+#coupon-area input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #adb5bd;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+#coupon-area input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#coupon-area button {
+    padding: 8px 15px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#coupon-area button:hover {
+    background-color: #5a6268;
+}
+
+
+
+.user-credit {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e9ecef;
+    text-align: right;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+.user-ticket-list { 
+    max-width: 900px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ticket-entry { 
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.trip-summary-card { 
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.trip-details { 
+    flex-grow: 1;
+}
+
+.trip-details h3 {
+    margin-bottom: 10px;
+    color: #343a40;
+    font-size: 1.25em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.trip-details p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+
+.ticket-action-band { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    gap: 15px;
+}
+
+.ticket-action-band p {
+    font-size: 0.95em;
+    color: #555;
+    font-weight: 500;
+}
+
+
+.ticket-action-band form {
+    display: inline-block;
+    margin: 0;
+}
+
+.ticket-action-band button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.action-cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-cancel:hover {
+    background-color: #c82333;
+}
+
+.action-download {
+    background-color: #28a745;
+    color: white;
+}
+
+.action-download:hover {
+    background-color: #1e7e34;
+}
+.company_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    padding: 5px; 
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    width: 100px; 
+    height: 100px;
+    object-fit: contain; 
+    border-radius: 4px;
+}
+

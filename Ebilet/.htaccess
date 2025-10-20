@@ -1,0 +1,17 @@
+RewriteEngine On
+Options -Indexes
+
+
+RewriteRule ^images/(.*)$ images/$1 [L]
+
+RewriteRule ^images/(.*)$ images/$1 [L]
+RewriteRule ^register$ auth/public/register.php [L]
+RewriteRule ^login$ auth/public/login.php [L]
+RewriteRule ^logout$ auth/public/logout.php [L]
+RewriteRule ^search$ search.php
+RewriteRule ^myaccount my-account.php
+RewriteRule ^companyadmin company-admin.php
+RewriteRule ^adminpanel admin-panel.php
+RewriteRule ^addroute add_route.php
+
+
