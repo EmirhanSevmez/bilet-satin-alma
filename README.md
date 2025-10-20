@@ -10,7 +10,7 @@ Uygulamayı yerel ortamınızda çalıştırmak için:
 
 1.  **Projeyi Klonlama:**
     ```bash
-    git clone [https://github.com/EmirhanSevmez/bilet-satin-alma](https://github.com/EmirhanSevmez/bilet-satin-alma)
+    git clone https://github.com/EmirhanSevmez/bilet-satin-alma
     ```
 
 2.  **Uygulamayı Başlatma (Docker):**
