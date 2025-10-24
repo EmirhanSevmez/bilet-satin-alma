@@ -6,6 +6,8 @@ require __DIR__ . '/auth/src/bootstrap.php';
 $inputs = [];
 $errors = [];
 
+$user_logged_in = is_user_logged_in();
+$current_user = $user_logged_in ? current_user() : null;
 $user_role = $current_user['role'] ?? '';
 if ($user_role != 'admin') {
     redirect_with_message("/Ebilet/","You can't access this page.","error") ;
