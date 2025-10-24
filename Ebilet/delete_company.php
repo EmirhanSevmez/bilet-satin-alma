@@ -13,8 +13,13 @@ if ($user_role != 'admin') {
 
 if ($_POST){
     $company_id = $_POST["company_id"];
-    delete_company($company_id);
-    redirect_to("adminpanel");
+    if (find_bus_routes_from_company($company_id)) {
+        redirect_with_message("/Ebilet/adminpanel.php","Cannot delete company with existing bus routes.","error");
+    }
+    else{
+        delete_company($company_id);
+        redirect_to("adminpanel");
+    }
 }
 
 
