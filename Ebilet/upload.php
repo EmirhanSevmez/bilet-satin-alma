@@ -5,9 +5,9 @@ display_all_flash_messages();
 
 $user_logged_in = is_user_logged_in();
 $current_user = $user_logged_in ? current_user() : null;
+$user_role = $current_user['role'] ?? '';
 
-
-if ( $current_user['role'] != 'admin') {
+if ( $user_role != 'admin') {
     redirect_with_message("/Ebilet/","You can't access this page.","error") ;
 }
 

@@ -7,8 +7,8 @@ require_once __DIR__ ."/auth/src/bootstrap.php";
 $user_logged_in = is_user_logged_in();
 $current_user = $user_logged_in ? current_user() : null;
 $routes = find_bus_routes_from_company($current_user["company_id"]);
-
-if ($current_user['role'] != 'company') {
+$user_role = $current_user['role'] ?? '';
+if ($user_role != 'company') {
     redirect_with_message("/Ebilet/","You can't access this page.","error") ;
 }
 $company_data = get_bus_company_by_id($current_user['company_id']);

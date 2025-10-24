@@ -6,7 +6,10 @@ require __DIR__ . '/auth/src/bootstrap.php';
 $inputs = [];
 $errors = [];
 
-
+$user_role = $current_user['role'] ?? '';
+if ($user_role != 'admin') {
+    redirect_with_message("/Ebilet/","You can't access this page.","error") ;
+}
 
 
 if (is_post_request()){

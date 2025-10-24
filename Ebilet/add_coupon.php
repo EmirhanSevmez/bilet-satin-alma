@@ -5,8 +5,8 @@ require_login();
 
 $user_logged_in = is_user_logged_in();
 $current_user = $user_logged_in ? current_user() : null;
-
-if ($current_user['role'] == 'user') {
+$user_role = $current_user['role'] ?? '';
+if ($user_role == 'user') {
     redirect_with_message("/Ebilet/","You can't access this page.","error") ;
 }
 
